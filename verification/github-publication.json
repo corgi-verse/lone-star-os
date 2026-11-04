@@ -1,0 +1,66 @@
+{
+  "recorded_at_utc": "2026-11-04T09:30:39.942Z",
+  "scope": "Initial public specification publication and GitHub Actions verification. Does not establish an application, ISO, model execution, device behavior or educational outcome.",
+  "repository": "corgi-verse/commonstar-learning-os",
+  "repository_url": "https://github.com/corgi-verse/commonstar-learning-os",
+  "owner_id": 337197592,
+  "visibility": "public",
+  "published_branch": "main",
+  "verified_commit": "b591330b946097b9bc17629bde2f78570555d8d7",
+  "verified_tree": "37562a85bc0653729581235f566a4081048beac3",
+  "local_source_tree_matches": true,
+  "published_file_count": 120,
+  "original_authoring_commit": "e6bceb9f310f33cc657ca520e8febb05ff421be4",
+  "workflow": {
+    "id": 41807756656,
+    "url": "https://github.com/corgi-verse/commonstar-learning-os/actions/runs/41807756656",
+    "name": "Specification checks",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "b591330b946097b9bc17629bde2f78570555d8d7",
+    "jobs": [
+      {
+        "id": 126498951197,
+        "name": "contracts",
+        "conclusion": "success",
+        "url": "https://github.com/corgi-verse/commonstar-learning-os/actions/runs/41807756656/job/126498951197",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Check out the reviewed source",
+            "conclusion": "success"
+          },
+          {
+            "name": "Install specification validators",
+            "conclusion": "success"
+          },
+          {
+            "name": "Validate memory and provider contracts",
+            "conclusion": "success"
+          },
+          {
+            "name": "Validate the local API contract",
+            "conclusion": "success"
+          },
+          {
+            "name": "Validate repository consistency",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Check out the reviewed source",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "historical_evidence": "verification/local-checks.json and verification/source-manifest.json retain their original local run identity.",
+  "subsequent_commits": "Later publication-evidence or documentation commits have their own GitHub Actions runs; this report identifies the exact initial publication tested above."
+}

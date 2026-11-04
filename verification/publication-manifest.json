@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-04T09:25:40.967012+00:00",
+  "generated_at_utc": "2026-11-04T09:30:41.181902+00:00",
   "scope": "Publication source identities; excludes this manifest to avoid self-reference. Historical local-checks and source-manifest remain unchanged.",
   "canonical_repository": "https://github.com/corgi-verse/commonstar-learning-os",
   "published_branch": "main",
@@ -7,9 +7,15 @@
   "publication_metadata_changes": [
     "README.md",
     "STATUS.md",
-    "verification/README.md"
+    "verification/README.md",
+    "verification/github-publication.json"
   ],
   "files": [
+    {
+      "path": "verification/github-publication.json",
+      "sha256": "d658127ecdb093638259d00415888446508cad3d6cc89140b27fa8bc81929c04",
+      "bytes": 2495
+    },
     {
       "path": ".github/workflows/specification.yml",
       "sha256": "08f54c2401a476d28ae8f16e6230badbb4c8f1325e52bed5b79429d881e854f8",
@@ -62,8 +68,8 @@
     },
     {
       "path": "STATUS.md",
-      "sha256": "13880712229dded63c23bfbfe6eb838035ee1f14cd9c6a807988228862ad7140",
-      "bytes": 4486
+      "sha256": "0eebf6f2752efa0d010d73107f224211136f5b4a7376df116760c5b5a6c65003",
+      "bytes": 5174
     },
     {
       "path": "api/README.md",
@@ -592,8 +598,8 @@
     },
     {
       "path": "verification/README.md",
-      "sha256": "a8345fc358b035d0457b4d668f9453ab6da6cfc2ced40f0a4ad09593704221f8",
-      "bytes": 2133
+      "sha256": "fccb444721df5a37cd961988eda3e5186ebdf7207d7e04a74895c0b93066bc57",
+      "bytes": 2287
     },
     {
       "path": "verification/local-checks.json",

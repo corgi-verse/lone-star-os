@@ -11,7 +11,7 @@ The specification has several different evidence levels. Keep them distinct.
 
 Detailed local run results are in [local-checks.json](local-checks.json); their original source identities are in [source-manifest.json](source-manifest.json). Those files preserve the authoring evidence. The current [publication manifest](publication-manifest.json) records source identities after publication-metadata updates. Model catalog digests are upstream metadata; a syntax check of a digest does not verify the model binary.
 
-The GitHub Actions workflow runs the three specification validators with read-only repository permission. Its checkout action is pinned to the upstream v7.0.1 commit. Local execution and a committed workflow do not establish that GitHub Actions has run; that result is recorded separately after publication.
+The GitHub Actions workflow runs the three specification validators with read-only repository permission. Its checkout action is pinned to the upstream v7.0.1 commit. The first public run passed all three validators; [github-publication.json](github-publication.json) records its exact commit, tree, run URL and job conclusions. Later commits have their own runs on the repository's [Actions page](https://github.com/corgi-verse/commonstar-learning-os/actions).
 
 ## Not established by these checks
 

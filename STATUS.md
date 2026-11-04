@@ -21,7 +21,7 @@ This is a new project, distinct from existing operating-system and memory reposi
 | Publication preflight | Passed for prohibited binary/private paths and selected credential patterns | A bounded source check, not an exhaustive privacy or security audit |
 | Distro/SSH reference checks | Profile schema passed; SSH client template parsed using `ssh -G` | Declarative configuration and client syntax; no SSH connection |
 | Final API source review | No remaining blockers in reviewed scope after recovery, plan identity and direct-edit repairs | Independent contract review; no runtime proof |
-| GitHub Actions workflow | YAML parsed; checkout action identity verified and pinned; read-only permissions | Workflow prepared; no GitHub Actions run yet |
+| GitHub Actions workflow | Passed on the initial published specification commit: all three validators completed successfully | [Remote run 41807756656](https://github.com/corgi-verse/commonstar-learning-os/actions/runs/41807756656); exact commit and jobs in `verification/github-publication.json` |
 
 Exact local command outputs and their scope are recorded under [verification](verification/README.md). Distro-specific checked-file hashes are in `distro/verification-report.json`. Model digests and sizes are upstream metadata: no model binary was downloaded or independently hashed.
 
@@ -35,4 +35,6 @@ The implementation acceptance gates remain in specification §17 and the install
 
 The owner explicitly selected `corgi-verse`. The [public repository](https://github.com/corgi-verse/commonstar-learning-os) has been created and its owner and public visibility verified. This specification is published on `main`; the commit containing this file identifies its exact source revision.
 
-The earlier local validation report remains historical evidence for the authoring snapshot. Publication changes update documentation and source identities without relabeling local checks as GitHub Actions runs. Remote workflow results are recorded separately after execution. This publication contains the specification and validation assets; it is not a bootable-image release or deployed learning service.
+The initial published specification commit is [`b591330b946097b9bc17629bde2f78570555d8d7`](https://github.com/corgi-verse/commonstar-learning-os/commit/b591330b946097b9bc17629bde2f78570555d8d7). Its 120-file Git tree exactly matched the local publication package, and [GitHub Actions run 41807756656](https://github.com/corgi-verse/commonstar-learning-os/actions/runs/41807756656) passed the memory, API and repository validators. The publication-evidence update adds the report under `verification/github-publication.json`; later commits are visible in the repository history and have separate workflow runs.
+
+The earlier local validation report remains historical evidence for the authoring snapshot. Publication changes update documentation and source identities without relabeling local checks as GitHub Actions runs. This publication contains the specification and validation assets; it is not a bootable-image release or deployed learning service.
