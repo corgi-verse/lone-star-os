@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "status": "researched-source-pin-not-executed",
+  "observed_on": "2026-11-04",
+  "upstream": {
+    "project": "llama.cpp",
+    "repository": "https://github.com/ggml-org/llama.cpp",
+    "commit": "bee23322f1baa3d2dd16b8339bed6aff4a8eb663",
+    "commit_time_utc": "2026-11-04T05:17:30Z",
+    "commit_url": "https://github.com/ggml-org/llama.cpp/commit/bee23322f1baa3d2dd16b8339bed6aff4a8eb663",
+    "server_readme_blob": "afa448b8a736b41ff1adf706ea9d90c22683ed63",
+    "server_readme_url": "https://github.com/ggml-org/llama.cpp/blob/bee23322f1baa3d2dd16b8339bed6aff4a8eb663/tools/server/README.md",
+    "retrieval": "Authenticated GitHub read API; commit identity and matching README retrieved",
+    "compiled": false,
+    "model_loading_tested": false,
+    "safety_or_security_certified": false
+  },
+  "policy": {
+    "bind_address": "127.0.0.1",
+    "network_access": {
+      "external_outbound": "denied",
+      "private_ipc": "Authenticated private Unix sockets and configured loopback inference endpoints remain available",
+      "enforcement": "OS process network controls verified for the installed platform; loopback binding and --offline are not an egress sandbox",
+      "failure": "Refuse private-data inference when required isolation cannot be established; never silently allow external network access"
+    },
+    "ipc_layers": "A provider-profile Unix socket may terminate at the Commonstar gateway; that gateway alone calls the private loopback llama worker with its separate API key",
+    "api_key_required": true,
+    "api_key_delivery": "Protected file generated at setup, never a command-line literal or repository value",
+    "parallel_slots": 1,
+    "additional_prompt_cache_mib": 0,
+    "persistent_prompt_cache": false,
+    "request_content_logging": false,
+    "direct_vault_access": false,
+    "built_in_tools": false,
+    "public_tunnel": false,
+    "cloud_fallback": false,
+    "configuration_environment": "Construct an allowlisted environment; reject inherited upstream tool, download, cache and tunnel options",
+    "allowed_gateway_routes": ["GET /health", "POST /v1/chat/completions"],
+    "embedding_policy": "A separate reviewed embedding worker and manifest, not this generative worker's hidden extra service",
+    "profile_switch": "Terminate the old learner worker and clear request state before loading a different learner profile"
+  },
+  "common_argv": [
+    "--host", "127.0.0.1",
+    "--parallel", "1",
+    "--cache-ram", "0",
+    "--no-cache-idle-slots",
+    "--no-slots",
+    "--no-webui",
+    "--no-webui-mcp-proxy",
+    "--no-agent",
+    "--log-disable",
+    "--offline"
+  ],
+  "argv_resolved_by_orchestrator": ["--model", "--port", "--ctx-size", "--api-key-file"],
+  "profiles": [
+    {
+      "id": "learner-flagship",
+      "selected_model": "Gemma 4 E4B official Google QAT",
+      "role": "Default persistent on-device intelligence",
+      "context_tokens": 8192,
+      "port": 17832,
+      "model_artifact": "Exact checkpoint, quantization, license and SHA-256 are resolved from the project's verified model manifest",
+      "performance": "Unmeasured on target hardware",
+      "modalities": "Text initially; image/audio projectors require separate validated model-pack capabilities"
+    },
+    {
+      "id": "learner-compact",
+      "selected_model": "Ministral 3B",
+      "role": "Explicitly selected compact on-device profile",
+      "context_tokens": 8192,
+      "port": 17832,
+      "model_artifact": "Exact checkpoint, quantization, license and SHA-256 are resolved from the project's verified model manifest",
+      "performance": "Unmeasured on target hardware"
+    },
+    {
+      "id": "workstation-reference",
+      "selected_model": "Gemma 4 31B",
+      "role": "Owner-controlled Ubuntu workstation inference",
+      "context_tokens": 16384,
+      "evaluated_upgrade_context_tokens": 32768,
+      "port": 18081,
+      "tunnel_client_port": 18082,
+      "model_artifact": "Exact checkpoint, quantization, license and SHA-256 are resolved from the project's verified model manifest",
+      "performance": "Unmeasured; 32768 context requires an explicit memory and quality acceptance run"
+    }
+  ],
+  "embedding_profile": {
+    "id": "local-embedding",
+    "selected_model": "Google EmbeddingGemma 2 270M",
+    "artifact_source": "ggml-org/embeddinggemma-2-GGUF",
+    "artifact_variant": "BF16",
+    "researched_file_bytes": 557950176,
+    "model_max_context_tokens": 8192,
+    "default_chunk_tokens": 512,
+    "dimensions": 768,
+    "normalize_vectors": true,
+    "execution_dtype_policy": "BF16 or F32 supported execution only; reject FP16 conversion or fallback",
+    "worker_mode": "Separate local embedding process with --embedding enabled and only its required embedding route",
+    "network_access": "External outbound traffic denied; authenticated private Unix or configured loopback IPC permitted",
+    "scheduling": "Batched indexing pauses while generative inference runs; lexical retrieval remains available",
+    "vector_store": "SQLCipher with sqlite-vec; extension and encrypted-database compatibility must be verified",
+    "artifact_identity": "Exact file revision, SHA-256 and license are supplied by the verified project model manifest",
+    "validation": "Metadata researched only; no artifact download, execution, finite-output check or retrieval-quality measurement performed"
+  },
+  "release_validation": [
+    "Compile pinned source for each supported CPU/GPU backend and capture compiler, flags and binary hash",
+    "Confirm all selected argv flags in built --help output; refuse startup on unsupported flags",
+    "Load each exact model artifact and validate its chat template, tokenizer, stop conditions and structured output behavior",
+    "Test context allocation and latency with actual 8192/16384/32768 profiles rather than inferring runtime RAM from weight-file size",
+    "Reject unauthorized routes, unauthenticated requests, malicious browser origins and environment overrides",
+    "Verify external outbound connections are denied while the approved local IPC request and response still work",
+    "Prove the runtime cannot read vault files or launch shell/file tools",
+    "Inspect configured logging, crash/core handling, swap and cache persistence with synthetic data",
+    "Record upstream security review and project model-quality evaluation before promoting this research pin to a release lock"
+  ]
+}

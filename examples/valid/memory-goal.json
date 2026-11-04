@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "record_id": "urn:uuid:00000000-0000-4000-8000-000000000005",
+  "profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+  "record_type": "goal",
+  "revision": 1,
+  "created_at": "2026-11-04T01:30:00-06:00",
+  "observed_at": "2026-11-04T01:30:00-06:00",
+  "valid_from": "2026-11-04T01:30:00-06:00",
+  "valid_until": null,
+  "source_refs": [
+    {
+      "artifact_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+      "revision": 1,
+      "locator": "section 1"
+    }
+  ],
+  "review": {
+    "status": "observed",
+    "method": "synthetic fixture generator",
+    "reviewer_id": null
+  },
+  "retention_class": "personal_learning_evidence",
+  "scope": "current_profile",
+  "supersedes": null,
+  "payload": {
+    "title": "Review proportional relationships",
+    "description": "Complete a short independent review using the synthetic lesson.",
+    "status": "active",
+    "milestones": [
+      {
+        "milestone_id": "urn:uuid:00000000-0000-4000-8000-000000000009",
+        "title": "Finish a practice set",
+        "status": "active"
+      }
+    ],
+    "resource_refs": [
+      {
+        "artifact_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+        "revision": 1,
+        "locator": "section 1"
+      }
+    ]
+  }
+}

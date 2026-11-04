@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/distro-profile.schema.json",
+  "schema_version": "1.0",
+  "profile_id": "commonstar-learner-amd64",
+  "product": "Commonstar Learning OS",
+  "artifact_status": "specification-only",
+  "as_of": "2026-11-04",
+  "base": {
+    "distribution": "Debian",
+    "major_version": 13,
+    "researched_point_release": "13.7",
+    "suite": "trixie",
+    "architecture": "amd64",
+    "additional_package_architectures": ["arm64"],
+    "desktop": "KDE Plasma",
+    "desktop_series": "6.3",
+    "session": "Wayland",
+    "kernel_policy": "Debian-supported signed stock kernel; no custom kernel in the reference release",
+    "security_update_suites": ["trixie-security", "trixie-updates"],
+    "rolling_suite_aliases_allowed": false,
+    "primary_source": "https://www.debian.org/News/2026/20260912"
+  },
+  "delivery": {
+    "default": "amd64-uefi-live-installer-iso",
+    "builder": "Debian live-build",
+    "installer": "Calamares",
+    "overlay_package": "commonstar-desktop",
+    "overlay_targets": [
+      "Debian 13 amd64 and arm64",
+      "Ubuntu 26.04 LTS amd64 and arm64, after ABI and integration tests"
+    ],
+    "chromebook": "Companion package inside an administrator-enabled and tested ChromeOS Linux environment",
+    "arm64_image_policy": "Hardware-specific image certification; arm64 packages do not imply universal boot compatibility",
+    "live_session_vault": "ephemeral-demo-only unless explicitly provisioned on encrypted persistent storage",
+    "local_model_bundled": true,
+    "internet_required_for_bundled_local_learning": false
+  },
+  "installation": {
+    "partition_table": "GPT",
+    "firmware": "UEFI",
+    "erase_policy": "Interactive confirmation of exact target disk identity, capacity and affected partitions",
+    "automatic_existing_disk_conversion": false,
+    "partitions": [
+      {"role": "efi", "mount": "/boot/efi", "filesystem": "vfat", "size_mib": 512, "encrypted": false},
+      {"role": "boot", "mount": "/boot", "filesystem": "ext4", "size_mib": 2048, "encrypted": false},
+      {"role": "system-and-data", "mount": "/", "filesystem": "ext4", "allocation": "remaining-approved-space", "encrypted": true}
+    ],
+    "encryption": {
+      "format": "LUKS2",
+      "key_derivation": "Argon2id with installer-calibrated parameters recorded in the installation report",
+      "boot_unlock": "initramfs unlocks root after bootloader loads the kernel; GRUB need not unlock root",
+      "plaintext_unlock_key_in_boot": false,
+      "recovery_key": "Locally generated; displayed once for an explicitly chosen custodian; never in Git or telemetry",
+      "tpm_required": false,
+      "hibernation_enabled": false
+    },
+    "swap": {
+      "default": "zram",
+      "disk_swap_default": false,
+      "disk_swap_when_enabled": "Only inside an encrypted volume with explicit resource and resume validation"
+    },
+    "secure_boot": {
+      "goal": "Retain upstream signed shim, GRUB and kernel where supported; verify on each certified device",
+      "claim_before_hardware_test": "unverified",
+      "initramfs_full_verification_claim": false
+    }
+  },
+  "runtime": {
+    "worker": "llama.cpp",
+    "default_profile": "learner-flagship",
+    "compact_profile": "learner-compact",
+    "workstation_profile": "workstation-reference",
+    "mandatory_on_device_inference": true,
+    "authority": "Local Rust orchestrator and SQLCipher vault",
+    "ui": "Tauri 2 with React and TypeScript",
+    "model_database_access": false,
+    "model_shell_tools": false,
+    "cloud_default": "disabled",
+    "unattended_provider_fallback": false
+  },
+  "updates": {
+    "mechanism": "APT with authenticated metadata and separately verified application/model manifests",
+    "channels": ["development", "candidate", "stable"],
+    "automatic_forced_reboots": false,
+    "keep_previous_kernel": true,
+    "keep_previous_compatible_application": true,
+    "schema_migrations": "Transactional with a consistent encrypted pre-migration recovery snapshot",
+    "automatic_os_snapshot_rollback": false,
+    "security_support_owner": "Distribution maintainer for Commonstar packages; upstream support terms for upstream packages"
+  },
+  "recovery": {
+    "os": "Known-good recovery media, previous bootable kernel and reinstall procedure",
+    "application": "Previous schema-compatible signed package or verified data restore",
+    "vault": "One active writing device; consistent encrypted versioned snapshots to one selected backup destination",
+    "clean_device_restore_required": true,
+    "backup_decryption_key_in_cloud": false,
+    "restore_overwrite_confirmation_required": true,
+    "reinstall_must_preserve_or_restore_vault": true
+  },
+  "release_gate_ids": [
+    "REL-01", "REL-02", "REL-03", "REL-04", "REL-05",
+    "REL-06", "REL-07", "REL-08", "REL-09", "REL-10", "REL-11", "REL-12"
+  ]
+}

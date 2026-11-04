@@ -1,0 +1,3237 @@
+{
+  "description": "Synthetic contract fixtures only. No model inference, security isolation, device compatibility, cryptographic signature validation or educational outcome is demonstrated.",
+  "cases": [
+    {
+      "name": "memory-artifact",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-artifact.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-learning_event",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-learning_event.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-learning_state",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-learning_state.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-fact",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-fact.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-preference",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-preference.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-note",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-note.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-goal",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-goal.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-task",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-task.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-session_summary",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-session_summary.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-permission",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-permission.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record",
+          "manage_permissions"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-receipt",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-receipt.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-correction",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-correction.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "memory-deletion",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/memory-deletion.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "proposal-note-create",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-note-create.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-fact-propose",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-fact-propose.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-preference-propose",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-preference-propose.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-learning_state-propose",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-learning_state-propose.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-plan-propose",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-plan-propose.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-task-propose",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-task-propose.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-practice-propose",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-practice-propose.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-session_summary-propose",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-session_summary-propose.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "context-capsule",
+      "schema": "urn:commonstar:schema:context-capsule:1",
+      "path": "examples/valid/context-capsule.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "forbidden_identifiers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000001",
+          "SYNTHETIC-SCHOOL-ID-123"
+        ],
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "tutor-response",
+      "schema": "urn:commonstar:schema:tutor-response:1",
+      "path": "examples/valid/tutor-response.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "request_id": "urn:uuid:00000000-0000-4000-8000-000000000200",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "provider-local",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/valid/provider-local.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "provider-workstation",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/valid/provider-workstation.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "provider-openai-disabled",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/valid/provider-openai-disabled.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "content-pack-draft",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/valid/content-pack-draft.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "school_mode": false,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      }
+    },
+    {
+      "name": "proposal-forged-authority",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-forged-authority.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-nested-forged-authority",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-nested-forged-authority.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-profile-injection",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-profile-injection.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-unknown-field",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-unknown-field.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-schema-mismatch",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-schema-mismatch.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-unknown-evidence",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-unknown-evidence.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      },
+      "error_code": "unknown_evidence"
+    },
+    {
+      "name": "capsule-stable-profile-field",
+      "schema": "urn:commonstar:schema:context-capsule:1",
+      "path": "examples/invalid/capsule-stable-profile-field.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "forbidden_identifiers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000001",
+          "SYNTHETIC-SCHOOL-ID-123"
+        ],
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "capsule-stable-source-field",
+      "schema": "urn:commonstar:schema:context-capsule:1",
+      "path": "examples/invalid/capsule-stable-source-field.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "forbidden_identifiers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000001",
+          "SYNTHETIC-SCHOOL-ID-123"
+        ],
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "capsule-known-identifier-in-text",
+      "schema": "urn:commonstar:schema:context-capsule:1",
+      "path": "examples/invalid/capsule-known-identifier-in-text.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "forbidden_identifiers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000001",
+          "SYNTHETIC-SCHOOL-ID-123"
+        ],
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "forbidden_identifier"
+    },
+    {
+      "name": "capsule-duplicate-source",
+      "schema": "urn:commonstar:schema:context-capsule:1",
+      "path": "examples/invalid/capsule-duplicate-source.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "forbidden_identifiers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000001",
+          "SYNTHETIC-SCHOOL-ID-123"
+        ],
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "duplicate_source"
+    },
+    {
+      "name": "response-invalid-citation",
+      "schema": "urn:commonstar:schema:tutor-response:1",
+      "path": "examples/invalid/response-invalid-citation.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "request_id": "urn:uuid:00000000-0000-4000-8000-000000000200",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      },
+      "error_code": "unknown_citation"
+    },
+    {
+      "name": "response-invalid-locator",
+      "schema": "urn:commonstar:schema:tutor-response:1",
+      "path": "examples/invalid/response-invalid-locator.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "request_id": "urn:uuid:00000000-0000-4000-8000-000000000200",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      },
+      "error_code": "invalid_citation_locator"
+    },
+    {
+      "name": "response-wrong-request",
+      "schema": "urn:commonstar:schema:tutor-response:1",
+      "path": "examples/invalid/response-wrong-request.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "request_id": "urn:uuid:00000000-0000-4000-8000-000000000200",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      },
+      "error_code": "request_mismatch"
+    },
+    {
+      "name": "record-forged-reviewer",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/invalid/record-forged-reviewer.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "unauthorized_review"
+    },
+    {
+      "name": "record-cross-profile",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/invalid/record-cross-profile.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "profile_mismatch"
+    },
+    {
+      "name": "record-model-direct-write",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/invalid/record-model-direct-write.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "model",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "model_direct_write"
+    },
+    {
+      "name": "record-model-authoritative-score",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/invalid/record-model-authoritative-score.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "unverified_model_score"
+    },
+    {
+      "name": "provider-unverified-peer",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/invalid/provider-unverified-peer.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": false,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "unverified_peer"
+    },
+    {
+      "name": "provider-enabled-without-approval",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/invalid/provider-enabled-without-approval.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "provider_not_approved"
+    },
+    {
+      "name": "provider-plaintext-remote",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/invalid/provider-plaintext-remote.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "unsafe_endpoint"
+    },
+    {
+      "name": "pack-path-traversal",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/invalid/pack-path-traversal.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      }
+    },
+    {
+      "name": "pack-unknown-asset",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/invalid/pack-unknown-asset.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      },
+      "error_code": "unknown_asset"
+    },
+    {
+      "name": "pack-unknown-prerequisite",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/invalid/pack-unknown-prerequisite.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      },
+      "error_code": "unknown_prerequisite"
+    },
+    {
+      "name": "pack-prerequisite-cycle",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/invalid/pack-prerequisite-cycle.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      },
+      "error_code": "prerequisite_cycle"
+    },
+    {
+      "name": "pack-draft-in-school-mode",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/invalid/pack-draft-in-school-mode.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "school_mode": true,
+        "signature_verified": false,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      },
+      "error_code": "school_pack_not_reviewed"
+    },
+    {
+      "name": "proposal-stable-record-reference",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-stable-record-reference.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "record-permission-without-capability",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/invalid/record-permission-without-capability.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "unauthorized_permission_change"
+    },
+    {
+      "name": "provider-local-authenticated-http",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/valid/provider-local-authenticated-http.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "provider-anonymous-local-http",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/invalid/provider-anonymous-local-http.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "provider-null-local-http-key",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/invalid/provider-null-local-http-key.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "provider-auth-transport-mismatch",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/invalid/provider-auth-transport-mismatch.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "provider-missing-ssh-application-key",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/invalid/provider-missing-ssh-application-key.json",
+      "expect": "invalid_schema",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "provider-reused-transport-application-key",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/invalid/provider-reused-transport-application-key.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      },
+      "error_code": "credential_role_reuse"
+    },
+    {
+      "name": "provider-workstation-mtls",
+      "schema": "urn:commonstar:schema:provider-profile:1",
+      "path": "examples/valid/provider-workstation-mtls.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "identity_verified": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "name": "pack-unknown-checker",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/invalid/pack-unknown-checker.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "school_mode": false,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      },
+      "error_code": "unknown_checker"
+    },
+    {
+      "name": "pack-checker-response-mismatch",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/invalid/pack-checker-response-mismatch.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "school_mode": false,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      },
+      "error_code": "checker_response_mismatch"
+    },
+    {
+      "name": "pack-missing-accessibility-asset",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/invalid/pack-missing-accessibility-asset.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "school_mode": false,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      },
+      "error_code": "unknown_accessibility_asset"
+    },
+    {
+      "name": "pack-unknown-exercise",
+      "schema": "urn:commonstar:schema:content-pack:1",
+      "path": "examples/invalid/pack-unknown-exercise.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "school_mode": false,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "allowed_checker_implementations": [
+          "urn:commonstar:checker-implementation:numeric-v1"
+        ]
+      },
+      "error_code": "unknown_exercise"
+    },
+    {
+      "name": "proposal-plan-dependency-dag",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-plan-dependency-dag.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      }
+    },
+    {
+      "name": "proposal-plan-unknown-dependency",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-plan-unknown-dependency.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      },
+      "error_code": "unknown_step_dependency"
+    },
+    {
+      "name": "proposal-plan-dependency-cycle",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-plan-dependency-cycle.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      },
+      "error_code": "step_dependency_cycle"
+    },
+    {
+      "name": "proposal-plan-unknown-existing-task",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/invalid/proposal-plan-unknown-existing-task.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {}
+      },
+      "error_code": "unknown_task_reference"
+    },
+    {
+      "name": "record-task-dependency",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/valid/record-task-dependency.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000400": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "task_dependencies": {
+          "urn:uuid:00000000-0000-4000-8000-000000000400": []
+        }
+      }
+    },
+    {
+      "name": "record-task-unknown-dependency",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/invalid/record-task-unknown-dependency.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000400": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "task_dependencies": {
+          "urn:uuid:00000000-0000-4000-8000-000000000400": []
+        }
+      },
+      "error_code": "unknown_task_dependency"
+    },
+    {
+      "name": "record-task-dependency-cycle",
+      "schema": "urn:commonstar:schema:memory-record:1",
+      "path": "examples/invalid/record-task-dependency-cycle.json",
+      "expect": "invalid_semantic",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000400": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000104": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "task_dependencies": {
+          "urn:uuid:00000000-0000-4000-8000-000000000400": [
+            "urn:uuid:00000000-0000-4000-8000-000000000104"
+          ]
+        }
+      },
+      "error_code": "task_dependency_cycle"
+    },
+    {
+      "name": "proposal-task-scoped-dependency",
+      "schema": "urn:commonstar:schema:model-proposal:1",
+      "path": "examples/valid/proposal-task-scoped-dependency.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "sources": {
+          "S1": {
+            "locator": "section 1"
+          }
+        },
+        "evidence": {
+          "E1": {
+            "assistance": "independent"
+          }
+        },
+        "current_goal_available": true,
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+        "tasks": {
+          "T1": {
+            "status": "accepted"
+          }
+        }
+      }
+    },
+    {
+      "name": "context-capsule-task-label",
+      "schema": "urn:commonstar:schema:context-capsule:1",
+      "path": "examples/valid/context-capsule-task-label.json",
+      "expect": "valid",
+      "context": {
+        "authenticated_profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+        "actor_kind": "service",
+        "authorized_actions": [
+          "commit_record"
+        ],
+        "approved_reviewers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000002"
+        ],
+        "known_records": {
+          "urn:uuid:00000000-0000-4000-8000-000000000003": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000004": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000005": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000031": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000032": [
+            1
+          ],
+          "urn:uuid:00000000-0000-4000-8000-000000000033": [
+            1
+          ]
+        },
+        "now": "2026-11-04T01:30:00-06:00",
+        "forbidden_identifiers": [
+          "urn:uuid:00000000-0000-4000-8000-000000000001",
+          "SYNTHETIC-SCHOOL-ID-123"
+        ],
+        "authenticated_actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002"
+      }
+    }
+  ]
+}

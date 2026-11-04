@@ -1,0 +1,40 @@
+{
+  "release": "Specification v1.0",
+  "checked_at_utc": "2026-11-04T08:04:52.880Z",
+  "source_branch": "spec/v1.0",
+  "scope": "Specification structure, fixtures and synthetic trusted-context checks only. No application, authentication service, model, cryptography implementation, OS installation, real device or learning outcome tested.",
+  "result": "passed",
+  "execution_environment": "Linux authoring environment; Python validators with declared dependencies, outside the product runtime.",
+  "checks": {
+    "contracts": {
+      "command": "python3 tests/validate_contracts.py",
+      "exit_code": 0,
+      "output": "PASS: 7 Draft 2020-12 schemas; 74 synthetic fixtures (33 valid, 13 schema rejections, 28 semantic rejections).\nScope: contracts only. No runtime, inference, encryption, network isolation, signature, device or learning-outcome claim.\n"
+    },
+    "api": {
+      "command": "python3 tests/validate_openapi.py",
+      "exit_code": 0,
+      "output": "{\n  \"result\": \"passed\",\n  \"openapi\": \"3.1.0\",\n  \"operations\": 21,\n  \"mutations_with_idempotency\": 13,\n  \"local_references_resolved\": 539,\n  \"embedded_contracts_verified\": 7,\n  \"negative_request_cases\": 20,\n  \"recovery_scope_negative_cases\": 18,\n  \"plan_snapshot_negative_cases\": 7,\n  \"evidence_scope\": \"Contract structure, request validation and synthetic trusted-context policy checks only; not real authentication, grants, transactions, service/model/device execution.\"\n}\n"
+    },
+    "repository": {
+      "command": "python3 tests/validate_repository.py --json",
+      "exit_code": 0,
+      "output": "{\n  \"checked_at_utc\": \"2026-11-04T08:04:52.124092+00:00\",\n  \"scope\": \"Specification consistency only; no application, model, crypto, OS sandbox, installer, device or educational evaluation\",\n  \"checks\": [\n    {\n      \"name\": \"Required deliverables\",\n      \"status\": \"passed\",\n      \"detail\": \"22 required files exist\"\n    },\n    {\n      \"name\": \"JSON syntax\",\n      \"status\": \"passed\",\n      \"detail\": \"91 JSON documents parsed\"\n    },\n    {\n      \"name\": \"Distro schema\",\n      \"status\": \"passed\",\n      \"detail\": \"Distro profile matches its Draft 2020-12 schema\"\n    },\n    {\n      \"name\": \"Model metadata\",\n      \"status\": \"passed\",\n      \"detail\": \"7 artifact identities structurally complete; binaries NOT verified\"\n    },\n    {\n      \"name\": \"Runtime boundary consistency\",\n      \"status\": \"passed\",\n      \"detail\": \"Research runtime lock retains the specified boundaries and unexecuted status\"\n    },\n    {\n      \"name\": \"Documentation links\",\n      \"status\": \"passed\",\n      \"detail\": \"27 relative documentation links resolve\"\n    },\n    {\n      \"name\": \"Publication preflight\",\n      \"status\": \"passed\",\n      \"detail\": \"118 text files checked for prohibited binary/private paths and selected credential patterns; not an exhaustive data audit\"\n    }\n  ],\n  \"passed\": true,\n  \"errors\": []\n}\n"
+    }
+  },
+  "workflow": {
+    "yaml_syntax": "passed in local parser",
+    "repository_permissions": "contents: read",
+    "checkout_pin": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "upstream_tag": "v7.0.1",
+    "github_actions_run": false
+  },
+  "reviewed_repairs": [
+    "Clean-device recovery authority without an active profile",
+    "Goal-based plan identity and task/dependency snapshot concurrency",
+    "Direct user note creation and typed task edits without inference",
+    "Retained original-turn reference mapping for model proposal acceptance"
+  ],
+  "review_scope": "Independent source/contract review; no remaining blockers in the reviewed scope, no runtime-security claim.",
+  "binaries": "Upstream model identity metadata only; no downloads or independently recomputed model digests."
+}

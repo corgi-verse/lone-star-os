@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "proposal_id": "urn:uuid:00000000-0000-4000-8000-000000000113",
+  "kind": "learning_state.propose",
+  "evidence_refs": [
+    {
+      "ref": "E1"
+    }
+  ],
+  "payload": {
+    "skill_id": "urn:commonstar:skill:proportional-relationships",
+    "summary": "One independent example was correct; more evidence is needed.",
+    "estimate": "practicing",
+    "evidence_refs": [
+      {
+        "ref": "E1"
+      }
+    ],
+    "as_of": "2026-11-04T01:30:00-06:00"
+  }
+}

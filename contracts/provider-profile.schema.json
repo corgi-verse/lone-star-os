@@ -1,0 +1,596 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:commonstar:schema:provider-profile:1",
+  "title": "Commonstar locally approved provider profile",
+  "description": "Trusted configuration, not model-writable. Retention statements require operational evidence; a JSON value cannot guarantee remote behavior.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "provider_id": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+    },
+    "kind": {
+      "enum": [
+        "local",
+        "workstation",
+        "openai"
+      ]
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 150
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "preferred": {
+      "type": "boolean"
+    },
+    "endpoint": {
+      "type": "object",
+      "properties": {
+        "transport": {
+          "enum": [
+            "unix",
+            "http-loopback",
+            "ssh-forward",
+            "https-mtls",
+            "https"
+          ]
+        },
+        "address": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "server_identity": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "algorithm": {
+                  "enum": [
+                    "ssh-ed25519",
+                    "sha256-certificate"
+                  ]
+                },
+                "fingerprint": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 250
+                }
+              },
+              "required": [
+                "algorithm",
+                "fingerprint"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "authentication": {
+          "type": "object",
+          "properties": {
+            "method": {
+              "enum": [
+                "local_socket",
+                "ssh_key",
+                "mtls",
+                "api_key"
+              ]
+            },
+            "credential_ref": {
+              "anyOf": [
+                {
+                  "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "application_credential_ref": {
+              "anyOf": [
+                {
+                  "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "method",
+            "credential_ref",
+            "application_credential_ref"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "transport",
+        "address",
+        "server_identity",
+        "authentication"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "transport": {
+                "const": "unix"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "authentication": {
+                "properties": {
+                  "method": {
+                    "const": "local_socket"
+                  },
+                  "credential_ref": {
+                    "type": "null"
+                  },
+                  "application_credential_ref": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "transport": {
+                "const": "http-loopback"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "authentication": {
+                "properties": {
+                  "method": {
+                    "const": "api_key"
+                  },
+                  "credential_ref": {
+                    "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+                  },
+                  "application_credential_ref": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "transport": {
+                "const": "ssh-forward"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "server_identity": {
+                "type": "object"
+              },
+              "authentication": {
+                "properties": {
+                  "method": {
+                    "const": "ssh_key"
+                  },
+                  "credential_ref": {
+                    "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+                  },
+                  "application_credential_ref": {
+                    "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "transport": {
+                "const": "https-mtls"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "server_identity": {
+                "type": "object"
+              },
+              "authentication": {
+                "properties": {
+                  "method": {
+                    "const": "mtls"
+                  },
+                  "credential_ref": {
+                    "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+                  },
+                  "application_credential_ref": {
+                    "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "transport": {
+                "const": "https"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "authentication": {
+                "properties": {
+                  "method": {
+                    "const": "api_key"
+                  },
+                  "application_credential_ref": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "model": {
+      "type": "object",
+      "properties": {
+        "upstream_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "format": {
+          "enum": [
+            "gguf",
+            "api"
+          ]
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "license_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "context_limit": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "upstream_id",
+        "revision",
+        "format",
+        "sha256",
+        "license_id",
+        "context_limit"
+      ],
+      "additionalProperties": false
+    },
+    "capabilities": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "const": true
+        },
+        "streaming": {
+          "type": "boolean"
+        },
+        "json_schema": {
+          "type": "boolean"
+        },
+        "tools": {
+          "type": "boolean"
+        },
+        "embeddings": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "text",
+        "streaming",
+        "json_schema",
+        "tools",
+        "embeddings"
+      ],
+      "additionalProperties": false
+    },
+    "data_policy": {
+      "type": "object",
+      "properties": {
+        "custody": {
+          "enum": [
+            "on_device",
+            "self_hosted",
+            "cloud"
+          ]
+        },
+        "payload_logging": {
+          "enum": [
+            "disabled",
+            "provider_policy"
+          ]
+        },
+        "training_use": {
+          "const": "disabled"
+        },
+        "personal_payload_persistence": {
+          "enum": [
+            "disabled",
+            "provider_policy"
+          ]
+        },
+        "retention_control": {
+          "enum": [
+            "local_only",
+            "configured_ephemeral",
+            "provider_standard",
+            "approved_zdr"
+          ]
+        },
+        "policy_uri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "policy_checked_at": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+        },
+        "policy_valid_until": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+        },
+        "approval_status": {
+          "enum": [
+            "unconfigured",
+            "pending",
+            "approved"
+          ]
+        },
+        "age_policy": {
+          "enum": [
+            "adult_only",
+            "teen_school_reviewed",
+            "under13_school_reviewed"
+          ]
+        },
+        "evidence_ref": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+        }
+      },
+      "required": [
+        "custody",
+        "payload_logging",
+        "training_use",
+        "personal_payload_persistence",
+        "retention_control",
+        "policy_uri",
+        "policy_checked_at",
+        "policy_valid_until",
+        "approval_status",
+        "age_policy",
+        "evidence_ref"
+      ],
+      "additionalProperties": false
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "currency": {
+          "const": "USD"
+        },
+        "maximum_cost_per_day": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "currency",
+        "maximum_cost_per_day"
+      ],
+      "additionalProperties": false
+    },
+    "timeouts": {
+      "type": "object",
+      "properties": {
+        "connect_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "request_seconds": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "connect_seconds",
+        "request_seconds"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "provider_id",
+    "kind",
+    "display_name",
+    "enabled",
+    "preferred",
+    "endpoint",
+    "model",
+    "capabilities",
+    "data_policy",
+    "budget",
+    "timeouts"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "local"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "endpoint": {
+            "properties": {
+              "transport": {
+                "enum": [
+                  "unix",
+                  "http-loopback"
+                ]
+              },
+              "authentication": {
+                "properties": {
+                  "method": {
+                    "enum": [
+                      "local_socket",
+                      "api_key"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "data_policy": {
+            "properties": {
+              "custody": {
+                "const": "on_device"
+              },
+              "retention_control": {
+                "const": "local_only"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "workstation"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "endpoint": {
+            "properties": {
+              "transport": {
+                "enum": [
+                  "ssh-forward",
+                  "https-mtls"
+                ]
+              },
+              "server_identity": {
+                "type": "object"
+              },
+              "authentication": {
+                "properties": {
+                  "method": {
+                    "enum": [
+                      "ssh_key",
+                      "mtls"
+                    ]
+                  },
+                  "credential_ref": {
+                    "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+                  }
+                }
+              }
+            }
+          },
+          "data_policy": {
+            "properties": {
+              "custody": {
+                "const": "self_hosted"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "openai"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "endpoint": {
+            "properties": {
+              "transport": {
+                "const": "https"
+              },
+              "authentication": {
+                "properties": {
+                  "method": {
+                    "const": "api_key"
+                  }
+                }
+              }
+            }
+          },
+          "model": {
+            "properties": {
+              "format": {
+                "const": "api"
+              }
+            }
+          },
+          "data_policy": {
+            "properties": {
+              "custody": {
+                "const": "cloud"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

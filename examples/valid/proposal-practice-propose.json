@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "proposal_id": "urn:uuid:00000000-0000-4000-8000-000000000116",
+  "kind": "practice.propose",
+  "evidence_refs": [
+    {
+      "ref": "E1"
+    }
+  ],
+  "payload": {
+    "objective": "Recognize a constant ratio",
+    "source_refs": [
+      {
+        "source_ref": "S1",
+        "locator": "section 1"
+      }
+    ],
+    "prompt": "For x=1,2,3 and y=3,6,9, is y proportional to x?",
+    "response_format": "short_text",
+    "suggested_answer": "Yes; y=3x.",
+    "validation_status": "unverified"
+  }
+}

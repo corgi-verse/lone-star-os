@@ -1,0 +1,2 @@
+# Contract verification only; not application/runtime dependencies.
+jsonschema==4.23.0

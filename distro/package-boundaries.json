@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "status": "package-contract-not-built",
+  "packages": [
+    {"name": "commonstar-desktop", "contents": "Tauri 2 and React/TypeScript learner application, launcher, accessibility resources", "runs_as": "learner", "owns_authoritative_data": false, "permissions": "Typed local IPC; no provider secrets in the webview"},
+    {"name": "commonstar-core", "contents": "Rust orchestrator, SQLCipher vault, permissions, retrieval, validated memory writes and versioned schema migrations", "runs_as": "learner", "owns_authoritative_data": true, "permissions": "Only unlocked active profile; explicit export, backup and provider routing"},
+    {"name": "commonstar-parser-workers", "contents": "Reviewed document extraction workers and bounded OCR adapters", "runs_as": "sandboxed worker", "owns_authoritative_data": false, "permissions": "Single granted input and bounded output; no network or vault directory access"},
+    {"name": "commonstar-runtime-cpu", "contents": "Pinned llama.cpp CPU worker and Commonstar process supervisor", "runs_as": "isolated unprivileged worker", "owns_authoritative_data": false, "permissions": "Read-only verified model files; authenticated private IPC/loopback API; external outbound traffic denied; no vault access"},
+    {"name": "commonstar-runtime-gpu", "contents": "Optional platform-specific accelerated worker built from the same reviewed runtime pin", "runs_as": "isolated unprivileged worker", "owns_authoritative_data": false, "permissions": "Explicit required GPU device access; CPU fallback without loss of vault data"},
+    {"name": "commonstar-models", "contents": "Model catalog, checksums, attribution and capability manifests", "runs_as": "installer or bounded model manager", "owns_authoritative_data": false, "permissions": "Staged model downloads/imports; no arbitrary upstream execution or learner-data upload"},
+    {"name": "commonstar-content", "contents": "Original or license-compatible reviewed educational packs and provenance", "runs_as": "learner reads; administrator or authorized learner installs", "owns_authoritative_data": false, "permissions": "Versioned content store; content instructions never gain system authority"},
+    {"name": "commonstar-backup", "contents": "Consistent encrypted vault snapshot, backup and restore integration", "runs_as": "learner-authorized process", "owns_authoritative_data": false, "permissions": "Selected vault snapshot and one selected backup destination; decryption key remains under local custodian control"},
+    {"name": "commonstar-distro", "contents": "OS metapackage, first-run setup, policies, branding, update and recovery integration", "runs_as": "root only during reviewed OS administration", "owns_authoritative_data": false, "permissions": "No model or browser runs as root; no telemetry collector"},
+    {"name": "commonstar-workstation", "contents": "Optional Ubuntu inference worker, credential and SSH/TLS setup guidance", "runs_as": "dedicated unprivileged inference identity", "owns_authoritative_data": false, "permissions": "Request-scoped context in memory; no authoritative vault or saved conversation service"}
+  ],
+  "persistence": {
+    "vault": "Per-learner private state directory; SQLCipher database and encrypted attachments; OS-level encrypted volume",
+    "models": "Versioned read-only shared store with manifests and no learner information",
+    "content": "Versioned read-only reviewed packs; user imports enter the learner's encrypted vault",
+    "runtime_temp": "Private ephemeral directory; no prompt logging or persistent KV-cache files",
+    "secrets": "OS keyring or protected per-user credential file; not Git, desktop bundle, model pack or cloud backup plaintext",
+    "exports": "Explicit learner/custodian-authorized destination with disclosed scope and retention"
+  },
+  "abi_policy": "Build and test separate Debian/Ubuntu package artifacts where system dependencies differ; architecture support does not establish device certification."
+}

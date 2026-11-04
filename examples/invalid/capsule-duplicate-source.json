@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "request_id": "urn:uuid:00000000-0000-4000-8000-000000000200",
+  "purpose": "explain",
+  "mode": "workstation",
+  "policy_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "input": {
+    "question": "How can I recognize a proportional relationship?",
+    "goal": "Compare ratios and identify y=kx."
+  },
+  "sources": [
+    {
+      "ref": "S1",
+      "excerpt": "A proportional relationship has a constant ratio y/x for nonzero x.",
+      "locator": "section 1",
+      "content_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "ref": "S1",
+      "excerpt": "A proportional relationship has a constant ratio y/x for nonzero x.",
+      "locator": "section 1",
+      "content_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ],
+  "learning_context": {
+    "recent_evidence": [
+      {
+        "observation": "One independent ratio question was answered correctly.",
+        "assistance": "independent",
+        "observed_at": "2026-11-04T01:30:00-06:00",
+        "ref": "E1"
+      }
+    ],
+    "assistance_allowed": "hints",
+    "current_tasks": []
+  },
+  "allowed_output_schema": "urn:commonstar:schema:tutor-response:1",
+  "limits": {
+    "maximum_input_tokens": 4096,
+    "maximum_output_tokens": 1024,
+    "deadline_seconds": 180
+  },
+  "requested_data_policy": {
+    "payload_logging": false,
+    "persistent_session": false,
+    "training": false,
+    "retention_profile": "workstation_ephemeral"
+  }
+}

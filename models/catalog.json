@@ -1,0 +1,116 @@
+{
+  "observed_on": "2026-11-04",
+  "status": "upstream metadata observed only; no binary download, execution, checksum recomputation, or runtime validation",
+  "artifacts": [
+    {
+      "role": "client_default",
+      "repo_id": "google/gemma-4-E4B-it-qat-q4_0-gguf",
+      "revision": "4b4a2c1d584be7264f87aac328a1bc739ce81b6c",
+      "filename": "gemma-4-E4B_q4_0-it.gguf",
+      "quantization": "QAT Q4_0",
+      "size_bytes": 5154941280,
+      "sha256": "676c35070db6dbe52f93e9c864ee0fba4eddea94b9c875d9cb10daff453fbaee",
+      "license": "Apache-2.0",
+      "optional_projector": {
+        "filename": "gemma-4-E4B-it-mmproj.gguf",
+        "size_bytes": 991552256,
+        "sha256": "7498a37cb619e55f2fcf87eb931f56e99389ed6d432e4c5c66110694c0d65578"
+      },
+      "metadata_pointer_url": "https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-gguf/raw/4b4a2c1d584be7264f87aac328a1bc739ce81b6c/gemma-4-E4B_q4_0-it.gguf",
+      "binary_verification": "not_downloaded_or_recomputed"
+    },
+    {
+      "role": "workstation_default",
+      "repo_id": "google/gemma-4-31B-it-qat-q4_0-gguf",
+      "revision": "59dde24573e7e61570dba08b18a2e1fe246955ed",
+      "filename": "gemma-4-31B_q4_0-it.gguf",
+      "quantization": "QAT Q4_0",
+      "size_bytes": 17651001568,
+      "sha256": "179cfb99212709597eae5929112cfca677e1bbf566178b479ae1da0c4772874b",
+      "license": "Apache-2.0",
+      "metadata_pointer_url": "https://huggingface.co/google/gemma-4-31B-it-qat-q4_0-gguf/raw/59dde24573e7e61570dba08b18a2e1fe246955ed/gemma-4-31B_q4_0-it.gguf",
+      "binary_verification": "not_downloaded_or_recomputed"
+    },
+    {
+      "role": "workstation_latency_candidate",
+      "repo_id": "google/gemma-4-26B-A4B-it-qat-q4_0-gguf",
+      "revision": "d1c082be9cf3c8a514acf63b8761f4b41935842e",
+      "filename": "gemma-4-26B_q4_0-it.gguf",
+      "quantization": "QAT Q4_0",
+      "size_bytes": 14439363584,
+      "sha256": "3eca3b8f6d7baf218a7dd6bba5fb59a56ee25fe2d567b6f5f589b4f697eca51d",
+      "license": "Apache-2.0",
+      "metadata_pointer_url": "https://huggingface.co/google/gemma-4-26B-A4B-it-qat-q4_0-gguf/raw/d1c082be9cf3c8a514acf63b8761f4b41935842e/gemma-4-26B_q4_0-it.gguf",
+      "binary_verification": "not_downloaded_or_recomputed"
+    },
+    {
+      "role": "client_compact",
+      "repo_id": "mistralai/Ministral-3-3B-Instruct-2512-GGUF",
+      "revision": "eb599d408350ea2bb60452cb86be7c7b2fc28227",
+      "filename": "Ministral-3-3B-Instruct-2512-Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 2147023008,
+      "sha256": "9ed150d4367e68df0ac8e1540f6ddc65b42d0ee26378329d1ecbca60f93fc5f8",
+      "license": "Apache-2.0",
+      "optional_projector": {
+        "filename": "Ministral-3-3B-Instruct-2512-BF16-mmproj.gguf",
+        "size_bytes": 841501856,
+        "sha256": "70ca26e41ecea9da997e2887462ad68b848fbf64da011ff4107bbe7353519ee0"
+      },
+      "metadata_pointer_url": "https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512-GGUF/raw/eb599d408350ea2bb60452cb86be7c7b2fc28227/Ministral-3-3B-Instruct-2512-Q4_K_M.gguf",
+      "binary_verification": "not_downloaded_or_recomputed"
+    },
+    {
+      "role": "client_comparison",
+      "repo_id": "mistralai/Ministral-3-8B-Instruct-2512-GGUF",
+      "revision": "0102285ad796bd99af90f58de616092e5630e970",
+      "filename": "Ministral-3-8B-Instruct-2512-Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "size_bytes": 5198911904,
+      "sha256": "33e7a72cf5e6e2cfc2f2847075acc013d68bba023e35310cef86b5cf8fdca761",
+      "license": "Apache-2.0",
+      "metadata_pointer_url": "https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512-GGUF/raw/0102285ad796bd99af90f58de616092e5630e970/Ministral-3-8B-Instruct-2512-Q4_K_M.gguf",
+      "binary_verification": "not_downloaded_or_recomputed"
+    },
+    {
+      "role": "embedding_default",
+      "repo_id": "ggml-org/embeddinggemma-2-GGUF",
+      "revision": "6ea3e3a309d12a4779cfda98b8c19800d2d5da71",
+      "source_repo_id": "google/embeddinggemma-2",
+      "source_revision": "f9972ac22e696a105c482202646979e33e4b5a1e",
+      "filename": "embeddinggemma-2-BF16.gguf",
+      "quantization": "BF16",
+      "size_bytes": 557950176,
+      "sha256": "68bae29d62fb8c7d23e98d21fd4662753ddd636e6b62b8a70dfe059a9844f216",
+      "license": "Apache-2.0",
+      "embedding_dimensions": 768,
+      "optional_projector": {
+        "filename": "mmproj-embeddinggemma-2-BF16.gguf",
+        "size_bytes": 982074816,
+        "sha256": "cc8d7eb30a9984c5128d6b1ccdec7510bfce213dc92a840be0d20e2a62b26bcd"
+      },
+      "metadata_pointer_url": "https://huggingface.co/ggml-org/embeddinggemma-2-GGUF/raw/6ea3e3a309d12a4779cfda98b8c19800d2d5da71/embeddinggemma-2-BF16.gguf",
+      "binary_verification": "not_downloaded_or_recomputed"
+    },
+    {
+      "role": "embedding_compact_candidate",
+      "repo_id": "ggml-org/embeddinggemma-2-GGUF",
+      "revision": "6ea3e3a309d12a4779cfda98b8c19800d2d5da71",
+      "source_repo_id": "google/embeddinggemma-2",
+      "source_revision": "f9972ac22e696a105c482202646979e33e4b5a1e",
+      "filename": "embeddinggemma-2-Q8_0.gguf",
+      "quantization": "Q8_0",
+      "size_bytes": 309855456,
+      "sha256": "2188ac1deca4b77dffefd603c2776a9d76d9d74ec01841392982ebb840b09135",
+      "license": "Apache-2.0",
+      "embedding_dimensions": 768,
+      "optional_projector": {
+        "filename": "mmproj-embeddinggemma-2-Q8_0.gguf",
+        "size_bytes": 554821056,
+        "sha256": "0531309472a6bc6f4b146c3736eee7795ec9db1903c25490d3c937490cef6dd8"
+      },
+      "metadata_pointer_url": "https://huggingface.co/ggml-org/embeddinggemma-2-GGUF/raw/6ea3e3a309d12a4779cfda98b8c19800d2d5da71/embeddinggemma-2-Q8_0.gguf",
+      "binary_verification": "not_downloaded_or_recomputed"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "provider_id": "urn:commonstar:provider:optional-openai",
+  "kind": "openai",
+  "display_name": "Optional OpenAI adapter \u2014 unconfigured",
+  "enabled": false,
+  "preferred": false,
+  "endpoint": {
+    "transport": "https",
+    "address": "https://api.openai.com/v1/responses",
+    "server_identity": null,
+    "authentication": {
+      "method": "api_key",
+      "credential_ref": null,
+      "application_credential_ref": null
+    }
+  },
+  "model": {
+    "upstream_id": "operator-selects-approved-model",
+    "revision": "SYNTHETIC-UNVERIFIED-REVISION",
+    "format": "api",
+    "sha256": null,
+    "license_id": "Provider terms",
+    "context_limit": 8192
+  },
+  "capabilities": {
+    "text": true,
+    "streaming": true,
+    "json_schema": true,
+    "tools": false,
+    "embeddings": false
+  },
+  "data_policy": {
+    "custody": "cloud",
+    "payload_logging": "provider_policy",
+    "training_use": "disabled",
+    "personal_payload_persistence": "provider_policy",
+    "retention_control": "provider_standard",
+    "policy_uri": "https://developers.openai.com/api/docs/guides/your-data",
+    "policy_checked_at": "2026-11-04T01:30:00-06:00",
+    "policy_valid_until": "2027-01-01T00:00:00Z",
+    "approval_status": "unconfigured",
+    "age_policy": "adult_only",
+    "evidence_ref": "urn:commonstar:evidence:synthetic-contract-fixture"
+  },
+  "budget": {
+    "currency": "USD",
+    "maximum_cost_per_day": 0
+  },
+  "timeouts": {
+    "connect_seconds": 10,
+    "request_seconds": 180
+  }
+}

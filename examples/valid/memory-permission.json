@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "record_id": "urn:uuid:00000000-0000-4000-8000-000000000106",
+  "profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+  "record_type": "permission",
+  "revision": 1,
+  "created_at": "2026-11-04T01:30:00-06:00",
+  "observed_at": "2026-11-04T01:30:00-06:00",
+  "valid_from": "2026-11-04T01:30:00-06:00",
+  "valid_until": null,
+  "source_refs": [
+    {
+      "artifact_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+      "revision": 1,
+      "locator": "section 1"
+    }
+  ],
+  "review": {
+    "status": "observed",
+    "method": "synthetic fixture generator",
+    "reviewer_id": null
+  },
+  "retention_class": "permission_record",
+  "scope": "current_profile",
+  "supersedes": null,
+  "payload": {
+    "grant_id": "urn:uuid:00000000-0000-4000-8000-000000000021",
+    "principal_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+    "actions": [
+      "read",
+      "write_note"
+    ],
+    "record_classes": [
+      "note",
+      "artifact"
+    ],
+    "destinations": [],
+    "valid_from": "2026-11-04T01:30:00-06:00",
+    "expires_at": "2026-12-04T01:30:00-06:00",
+    "revoked_at": null,
+    "granted_by": "urn:uuid:00000000-0000-4000-8000-000000000002"
+  }
+}

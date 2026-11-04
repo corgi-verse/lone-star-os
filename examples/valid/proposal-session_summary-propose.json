@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "proposal_id": "urn:uuid:00000000-0000-4000-8000-000000000117",
+  "kind": "session_summary.propose",
+  "evidence_refs": [
+    {
+      "ref": "E1"
+    }
+  ],
+  "payload": {
+    "goal_ref": "current",
+    "summary": "Completed one practice question; next review will use a new table.",
+    "open_steps": [
+      "Try a table with a nonzero intercept."
+    ],
+    "evidence_refs": [
+      {
+        "ref": "E1"
+      }
+    ]
+  }
+}

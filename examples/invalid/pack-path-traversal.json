@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "pack_id": "urn:commonstar:content:synthetic-proportions",
+  "version": "1.0.0",
+  "title": "Synthetic proportions pack",
+  "languages": [
+    "en"
+  ],
+  "audiences": [
+    "adult"
+  ],
+  "rights": {
+    "license_id": "CC0-1.0",
+    "license_text_path": "LICENSE.txt",
+    "attribution": "Synthetic Commonstar validation fixture; not an adopted curriculum.",
+    "source_uri": null
+  },
+  "assets": [
+    {
+      "asset_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+      "path": "../private/vault.db",
+      "media_type": "text/markdown",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "byte_length": 480,
+      "rights_ref": "CC0-1.0"
+    }
+  ],
+  "standards": [],
+  "objectives": [
+    {
+      "objective_id": "urn:commonstar:skill:proportional-relationships",
+      "label": "Identify a constant ratio",
+      "prerequisite_ids": []
+    }
+  ],
+  "lessons": [
+    {
+      "lesson_id": "urn:commonstar:lesson:proportions-1",
+      "title": "Constant ratios",
+      "objective_ids": [
+        "urn:commonstar:skill:proportional-relationships"
+      ],
+      "asset_ids": [
+        "urn:uuid:00000000-0000-4000-8000-000000000003"
+      ],
+      "exercise_ids": [
+        "urn:commonstar:exercise:synthetic-ratio"
+      ],
+      "accessibility_refs": [
+        "urn:commonstar:accessibility:synthetic-plain-text"
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "reviewer_ids": [],
+    "reviewed_at": null
+  },
+  "signature": null,
+  "authors": [
+    {
+      "author_id": "urn:uuid:00000000-0000-4000-8000-000000000301",
+      "display_name": "Synthetic validation author",
+      "role": "author"
+    }
+  ],
+  "checkers": [
+    {
+      "checker_id": "urn:commonstar:checker:synthetic-numeric",
+      "kind": "numeric",
+      "version": "1.0.0",
+      "implementation_ref": "urn:commonstar:checker-implementation:numeric-v1",
+      "authority": "deterministic"
+    }
+  ],
+  "exercises": [
+    {
+      "exercise_id": "urn:commonstar:exercise:synthetic-ratio",
+      "title": "Find a constant ratio",
+      "prompt_asset_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+      "prompt_locator": "section 1",
+      "objective_ids": [
+        "urn:commonstar:skill:proportional-relationships"
+      ],
+      "response_type": "number",
+      "choices": [],
+      "checker_ref": "urn:commonstar:checker:synthetic-numeric",
+      "answer_spec": {
+        "type": "numeric",
+        "expected_value": 3,
+        "absolute_tolerance": 0
+      },
+      "feedback_asset_ids": [],
+      "accessibility_refs": [
+        "urn:commonstar:accessibility:synthetic-plain-text"
+      ]
+    }
+  ],
+  "accessibility_assets": [
+    {
+      "accessibility_id": "urn:commonstar:accessibility:synthetic-plain-text",
+      "asset_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+      "for_asset_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+      "role": "plain_text",
+      "language": "en"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "proposal_id": "urn:uuid:00000000-0000-4000-8000-000000000115",
+  "kind": "task.propose",
+  "evidence_refs": [
+    {
+      "ref": "E1"
+    }
+  ],
+  "payload": {
+    "title": "Review the synthetic lesson",
+    "goal_ref": "current",
+    "status": "proposed",
+    "due_at": "2026-11-05T17:00:00-06:00",
+    "time_zone": "America/Chicago",
+    "estimated_minutes": 15,
+    "resource_refs": [
+      {
+        "source_ref": "S1",
+        "locator": "section 1"
+      }
+    ],
+    "depends_on_task_refs": [
+      "T1"
+    ]
+  }
+}

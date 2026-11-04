@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "record_id": "urn:uuid:00000000-0000-4000-8000-000000000107",
+  "profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+  "record_type": "receipt",
+  "revision": 1,
+  "created_at": "2026-11-04T01:30:00-06:00",
+  "observed_at": "2026-11-04T01:30:00-06:00",
+  "valid_from": "2026-11-04T01:30:00-06:00",
+  "valid_until": null,
+  "source_refs": [
+    {
+      "artifact_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+      "revision": 1,
+      "locator": "section 1"
+    }
+  ],
+  "review": {
+    "status": "observed",
+    "method": "synthetic fixture generator",
+    "reviewer_id": null
+  },
+  "retention_class": "operational_receipt",
+  "scope": "current_profile",
+  "supersedes": null,
+  "payload": {
+    "operation": "memory.note.create",
+    "actor_id": "urn:uuid:00000000-0000-4000-8000-000000000002",
+    "scope_refs": [
+      {
+        "record_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+        "revision": 1
+      }
+    ],
+    "policy_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "provider_id": null,
+    "outcome": "completed",
+    "raw_payload_logged": false
+  }
+}

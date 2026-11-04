@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:commonstar:schema:context-capsule:1",
+  "title": "Commonstar bounded inference context",
+  "description": "Only request-scoped source labels cross this boundary. Free text still requires policy checks; schema validation cannot establish anonymity.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "request_id": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+    },
+    "purpose": {
+      "enum": [
+        "explain",
+        "offer_practice",
+        "plan_study",
+        "organize_materials",
+        "summarize",
+        "reflect"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "local",
+        "workstation",
+        "cloud"
+      ]
+    },
+    "policy_revision": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/sha256"
+    },
+    "input": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "question",
+        "goal"
+      ],
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "type": "string",
+            "pattern": "^S[1-9][0-9]*$"
+          },
+          "excerpt": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16000
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "content_sha256": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/sha256"
+          }
+        },
+        "required": [
+          "ref",
+          "excerpt",
+          "locator",
+          "content_sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "learning_context": {
+      "type": "object",
+      "properties": {
+        "recent_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "observation": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              },
+              "assistance": {
+                "enum": [
+                  "independent",
+                  "hinted",
+                  "worked_example_seen",
+                  "unknown_assistance"
+                ]
+              },
+              "observed_at": {
+                "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+              },
+              "ref": {
+                "type": "string",
+                "pattern": "^E[1-9][0-9]*$"
+              }
+            },
+            "required": [
+              "observation",
+              "assistance",
+              "observed_at",
+              "ref"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "assistance_allowed": {
+          "enum": [
+            "hints",
+            "explanations",
+            "worked_examples",
+            "independent_assessment"
+          ]
+        },
+        "current_tasks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ref": {
+                "type": "string",
+                "pattern": "^T[1-9][0-9]*$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "status": {
+                "enum": [
+                  "accepted",
+                  "completed",
+                  "cancelled"
+                ]
+              },
+              "due_at": {
+                "anyOf": [
+                  {
+                    "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "ref",
+              "title",
+              "status",
+              "due_at"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "recent_evidence",
+        "assistance_allowed",
+        "current_tasks"
+      ],
+      "additionalProperties": false
+    },
+    "allowed_output_schema": {
+      "const": "urn:commonstar:schema:tutor-response:1"
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "maximum_input_tokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maximum_output_tokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "deadline_seconds": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "maximum_input_tokens",
+        "maximum_output_tokens",
+        "deadline_seconds"
+      ],
+      "additionalProperties": false
+    },
+    "requested_data_policy": {
+      "type": "object",
+      "properties": {
+        "payload_logging": {
+          "const": false
+        },
+        "persistent_session": {
+          "const": false
+        },
+        "training": {
+          "const": false
+        },
+        "retention_profile": {
+          "enum": [
+            "on_device",
+            "workstation_ephemeral",
+            "provider_approved"
+          ]
+        }
+      },
+      "required": [
+        "payload_logging",
+        "persistent_session",
+        "training",
+        "retention_profile"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "purpose",
+    "mode",
+    "policy_revision",
+    "input",
+    "sources",
+    "learning_context",
+    "allowed_output_schema",
+    "limits",
+    "requested_data_policy"
+  ],
+  "additionalProperties": false
+}

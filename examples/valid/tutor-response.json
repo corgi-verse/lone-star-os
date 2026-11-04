@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "response_id": "urn:uuid:00000000-0000-4000-8000-000000000201",
+  "request_id": "urn:uuid:00000000-0000-4000-8000-000000000200",
+  "tutoring_mode": "explanation",
+  "message": {
+    "text": "Compare y/x for each nonzero x. The source defines a proportional relationship by that constant ratio.",
+    "citations": [
+      {
+        "source_ref": "S1",
+        "locator": "section 1"
+      }
+    ]
+  },
+  "knowledge_basis": "retrieved",
+  "limitations": [
+    "This example does not establish mastery."
+  ],
+  "memory_proposals": [
+    {
+      "schema_version": "1.0",
+      "proposal_id": "urn:uuid:00000000-0000-4000-8000-000000000110",
+      "kind": "note.create",
+      "evidence_refs": [
+        {
+          "ref": "E1"
+        }
+      ],
+      "payload": {
+        "title": "Ratio reminder",
+        "body": "Compare ratios before deciding whether the relationship is proportional.",
+        "artifact_refs": [
+          {
+            "source_ref": "S1",
+            "locator": "section 1"
+          }
+        ]
+      }
+    }
+  ],
+  "completion": "complete"
+}

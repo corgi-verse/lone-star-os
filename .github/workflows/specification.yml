@@ -1,0 +1,33 @@
+name: Specification checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: commonstar-spec-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contracts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the reviewed source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install specification validators
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install -r requirements.txt -r api/verification-requirements.txt
+      - name: Validate memory and provider contracts
+        run: .venv/bin/python tests/validate_contracts.py
+      - name: Validate the local API contract
+        run: .venv/bin/python tests/validate_openapi.py
+      - name: Validate repository consistency
+        run: .venv/bin/python tests/validate_repository.py

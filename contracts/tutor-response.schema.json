@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:commonstar:schema:tutor-response:1",
+  "title": "Commonstar tutor response shape",
+  "description": "Source-label validity is checked separately. Valid labels do not prove source support or educational correctness.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "response_id": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+    },
+    "request_id": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+    },
+    "tutoring_mode": {
+      "enum": [
+        "hint",
+        "explanation",
+        "practice",
+        "planning",
+        "organization",
+        "reflection"
+      ]
+    },
+    "message": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40000
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source_ref": {
+                "type": "string",
+                "pattern": "^S[1-9][0-9]*$"
+              },
+              "locator": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "source_ref",
+              "locator"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "text",
+        "citations"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_basis": {
+      "enum": [
+        "retrieved",
+        "mixed",
+        "model_general",
+        "insufficient_evidence"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "minItems": 0
+    },
+    "memory_proposals": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:commonstar:schema:model-proposal:1"
+      },
+      "minItems": 0
+    },
+    "completion": {
+      "enum": [
+        "complete",
+        "partial"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "response_id",
+    "request_id",
+    "tutoring_mode",
+    "message",
+    "knowledge_basis",
+    "limitations",
+    "memory_proposals",
+    "completion"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "knowledge_basis": {
+            "enum": [
+              "retrieved",
+              "mixed"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "message": {
+            "properties": {
+              "citations": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

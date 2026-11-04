@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "proposal_id": "urn:uuid:00000000-0000-4000-8000-000000000112",
+  "kind": "preference.propose",
+  "evidence_refs": [
+    {
+      "ref": "E1"
+    }
+  ],
+  "payload": {
+    "key": "language",
+    "value": "en",
+    "basis": "explicit_user_statement",
+    "statement_refs": []
+  }
+}

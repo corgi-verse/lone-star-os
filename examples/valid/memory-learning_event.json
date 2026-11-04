@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "record_id": "urn:uuid:00000000-0000-4000-8000-000000000004",
+  "profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+  "record_type": "learning_event",
+  "revision": 1,
+  "created_at": "2026-11-04T01:30:00-06:00",
+  "observed_at": "2026-11-04T01:30:00-06:00",
+  "valid_from": "2026-11-04T01:30:00-06:00",
+  "valid_until": null,
+  "source_refs": [
+    {
+      "artifact_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+      "revision": 1,
+      "locator": "section 1"
+    }
+  ],
+  "review": {
+    "status": "observed",
+    "method": "synthetic fixture generator",
+    "reviewer_id": null
+  },
+  "retention_class": "personal_learning_evidence",
+  "scope": "current_profile",
+  "supersedes": null,
+  "payload": {
+    "task_ref": "urn:commonstar:task:ratio-example-1",
+    "task_revision": 1,
+    "learner_response": "The constant of proportionality is 3.",
+    "assistance": "independent",
+    "scoring": {
+      "status": "correct",
+      "method": "deterministic",
+      "checker_version": "1.0.0",
+      "score": 1
+    },
+    "skill_ids": [
+      "urn:commonstar:skill:proportional-relationships"
+    ],
+    "duration_seconds": 45
+  }
+}

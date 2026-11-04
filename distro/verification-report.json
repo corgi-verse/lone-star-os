@@ -1,0 +1,45 @@
+{
+  "status": "specification-checks-only",
+  "checked_at_utc": "2026-11-04T07:42:34.003391+00:00",
+  "source_state": "working copy; hashes below identify checked files",
+  "jsonschema_version": "4.23.0",
+  "checks": {
+    "all_listed_json_parse": "passed",
+    "draft_2020_12_schema_meta_validation": "passed",
+    "distro_profile_against_schema_with_format_checker": "passed",
+    "ssh_client_reference_parse": "passed; ssh -G only, no connection",
+    "ssh_server_effective_configuration": "not completed; environment had no SSH host keys; no keys or server were provisioned"
+  },
+  "checked_files": [
+    {
+      "path": "distro/package-boundaries.json",
+      "sha256": "d714b378fc423d15575f1db7a6a2d8e01ac4788c90af4d38b0ca67c2ab092dfd"
+    },
+    {
+      "path": "distro/profiles/commonstar-amd64.json",
+      "sha256": "dcf93ec4def14d4b2b931e6c5caf4c39da67065f39547db9b9456a1d4df69a4f"
+    },
+    {
+      "path": "distro/runtime-lock.json",
+      "sha256": "ca4a964619ae92b417f89aa976183986fe1ccedb304706f2bc1ad150f76074d5"
+    },
+    {
+      "path": "distro/schemas/distro-profile.schema.json",
+      "sha256": "82e77fd0c4343bb92c33eab2b351420ceb897acc50282297ee61834481f55da4"
+    },
+    {
+      "path": "distro/workstation/ssh-client.conf.example",
+      "sha256": "b009d2428cb8511100032d71e16c486618e8d886c5a2c0834da513fd91feac79"
+    }
+  ],
+  "not_executed": [
+    "ISO or package build",
+    "OS installation",
+    "kernel or Secure Boot test",
+    "model download or inference",
+    "process/network isolation test",
+    "workstation SSH connection",
+    "backup restore",
+    "educational outcome study"
+  ]
+}

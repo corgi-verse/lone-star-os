@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "record_id": "urn:uuid:00000000-0000-4000-8000-000000000105",
+  "profile_id": "urn:uuid:00000000-0000-4000-8000-000000000001",
+  "record_type": "session_summary",
+  "revision": 1,
+  "created_at": "2026-11-04T01:30:00-06:00",
+  "observed_at": "2026-11-04T01:30:00-06:00",
+  "valid_from": "2026-11-04T01:30:00-06:00",
+  "valid_until": null,
+  "source_refs": [
+    {
+      "artifact_id": "urn:uuid:00000000-0000-4000-8000-000000000003",
+      "revision": 1,
+      "locator": "section 1"
+    }
+  ],
+  "review": {
+    "status": "observed",
+    "method": "synthetic fixture generator",
+    "reviewer_id": null
+  },
+  "retention_class": "personal_learning_evidence",
+  "scope": "current_profile",
+  "supersedes": null,
+  "payload": {
+    "goal_ref": "urn:uuid:00000000-0000-4000-8000-000000000005",
+    "summary": "Completed one practice question; next review will use a new table.",
+    "open_steps": [
+      "Try a table with a nonzero intercept."
+    ],
+    "evidence_refs": [
+      {
+        "record_id": "urn:uuid:00000000-0000-4000-8000-000000000004",
+        "revision": 1
+      }
+    ]
+  }
+}

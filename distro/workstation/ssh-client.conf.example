@@ -1,0 +1,29 @@
+# Commonstar reference only. NOT INSTALLED; no connection test performed.
+# Its syntax was read with ssh -G; this does not verify a remote workstation.
+# The .invalid hostname intentionally prevents accidental connection.
+# Provision a unique protected key and independently verify the workstation
+# host-key fingerprint before adding it to commonstar_known_hosts.
+# Replacing HostName is local setup, not authorization to open a router port.
+
+Host commonstar-workstation
+    HostName commonstar-workstation.invalid
+    User commonstar-inference
+    Port 22
+    IdentityFile ~/.ssh/commonstar_workstation
+    IdentitiesOnly yes
+    UserKnownHostsFile ~/.ssh/commonstar_known_hosts
+    StrictHostKeyChecking yes
+    PasswordAuthentication no
+    KbdInteractiveAuthentication no
+    ForwardAgent no
+    RequestTTY no
+    ExitOnForwardFailure yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+    LocalForward 127.0.0.1:18082 127.0.0.1:18081
+
+# After authorized provisioning and host verification:
+# ssh -F /absolute/path/to/the-configured-client-file -NT commonstar-workstation
+# The application then calls http://127.0.0.1:18082 through its own backend,
+# using a separately provisioned inference API key. It never embeds that key
+# in the learner webview or a command-line literal.

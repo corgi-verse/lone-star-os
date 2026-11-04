@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "proposal_id": "urn:uuid:00000000-0000-4000-8000-000000000114",
+  "kind": "plan.propose",
+  "evidence_refs": [
+    {
+      "ref": "E1"
+    }
+  ],
+  "payload": {
+    "goal_ref": "current",
+    "title": "Review with independent practice",
+    "steps": [
+      {
+        "title": "Read the synthetic source and answer a new question",
+        "resource_refs": [
+          {
+            "source_ref": "S1",
+            "locator": "section 1"
+          }
+        ],
+        "due_at": null,
+        "estimated_minutes": 15,
+        "step_ref": "step_1",
+        "depends_on_steps": [],
+        "depends_on_task_refs": [
+          "T999"
+        ]
+      },
+      {
+        "title": "Complete independent review",
+        "resource_refs": [
+          {
+            "source_ref": "S1",
+            "locator": "section 1"
+          }
+        ],
+        "due_at": null,
+        "estimated_minutes": 15,
+        "step_ref": "step_2",
+        "depends_on_steps": [
+          "step_1"
+        ],
+        "depends_on_task_refs": []
+      }
+    ],
+    "notes": "The user may change or accept this proposed plan.",
+    "time_zone": "America/Chicago"
+  }
+}

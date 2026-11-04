@@ -1,0 +1,1186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:commonstar:schema:memory-record:1",
+  "title": "Commonstar authoritative memory record",
+  "description": "System-owned envelope. Schema validity is not authorization. A model submits a proposal, never this complete authoritative record.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "record_id": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+    },
+    "profile_id": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+    },
+    "record_type": {
+      "enum": [
+        "artifact",
+        "learning_event",
+        "learning_state",
+        "fact",
+        "preference",
+        "note",
+        "goal",
+        "task",
+        "session_summary",
+        "permission",
+        "receipt",
+        "correction",
+        "deletion"
+      ]
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+    },
+    "observed_at": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+    },
+    "valid_from": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+    },
+    "valid_until": {
+      "anyOf": [
+        {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:commonstar:schema:common:1#/$defs/source_ref"
+      },
+      "minItems": 0
+    },
+    "review": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/review"
+    },
+    "retention_class": {
+      "enum": [
+        "personal_kept_material",
+        "personal_learning_evidence",
+        "institutional_course_record",
+        "session_buffer",
+        "operational_receipt",
+        "permission_record",
+        "deletion_record"
+      ]
+    },
+    "scope": {
+      "const": "current_profile"
+    },
+    "supersedes": {
+      "anyOf": [
+        {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_id",
+    "profile_id",
+    "record_type",
+    "revision",
+    "created_at",
+    "observed_at",
+    "valid_from",
+    "valid_until",
+    "source_refs",
+    "review",
+    "retention_class",
+    "scope",
+    "supersedes",
+    "payload"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "storage_ref": {
+          "type": "string",
+          "pattern": "^urn:commonstar:blob:sha256:[0-9a-f]{64}$"
+        },
+        "sha256": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/sha256"
+        },
+        "byte_length": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "origin": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "user_import",
+                "curated_pack",
+                "learner_created"
+              ]
+            },
+            "uri": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "uri"
+          ],
+          "additionalProperties": false
+        },
+        "rights": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "owned",
+                "licensed",
+                "permission",
+                "unknown_private_use"
+              ]
+            },
+            "license_id": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "license_id"
+          ],
+          "additionalProperties": false
+        },
+        "extraction": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "queued",
+                "ready",
+                "failed"
+              ]
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "locators": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "status",
+            "version",
+            "locators"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "title",
+        "media_type",
+        "storage_ref",
+        "sha256",
+        "byte_length",
+        "origin",
+        "rights",
+        "extraction"
+      ],
+      "additionalProperties": false
+    },
+    "learning_event": {
+      "type": "object",
+      "properties": {
+        "task_ref": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+        },
+        "task_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "learner_response": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20000
+        },
+        "assistance": {
+          "enum": [
+            "independent",
+            "hinted",
+            "worked_example_seen",
+            "unknown_assistance"
+          ]
+        },
+        "scoring": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unscored",
+                "correct",
+                "incorrect",
+                "partial",
+                "review_required"
+              ]
+            },
+            "method": {
+              "enum": [
+                "deterministic",
+                "educator",
+                "model_feedback",
+                "unscored"
+              ]
+            },
+            "checker_version": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "score": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "method",
+            "checker_version",
+            "score"
+          ],
+          "additionalProperties": false
+        },
+        "skill_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+          },
+          "minItems": 1
+        },
+        "duration_seconds": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "task_ref",
+        "task_revision",
+        "learner_response",
+        "assistance",
+        "scoring",
+        "skill_ids",
+        "duration_seconds"
+      ],
+      "additionalProperties": false
+    },
+    "learning_state": {
+      "type": "object",
+      "properties": {
+        "skill_id": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "estimate": {
+          "enum": [
+            "insufficient_evidence",
+            "developing",
+            "practicing",
+            "ready_for_review"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/evidence_ref"
+          },
+          "minItems": 0
+        },
+        "method_id": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+        },
+        "method_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "as_of": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "skill_id",
+        "summary",
+        "estimate",
+        "evidence_refs",
+        "method_id",
+        "method_version",
+        "as_of"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "estimate": {
+                "not": {
+                  "const": "insufficient_evidence"
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence_refs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "fact": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "value": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/scalar"
+        },
+        "data_class": {
+          "enum": [
+            "learning_context",
+            "user_statement",
+            "authorized_accommodation"
+          ]
+        },
+        "statement_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/evidence_ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "key",
+        "value",
+        "data_class",
+        "statement_refs"
+      ],
+      "additionalProperties": false
+    },
+    "preference": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "enum": [
+            "language",
+            "text_scale",
+            "input_method",
+            "reading_preferences",
+            "voluntary_interests",
+            "notification_preferences"
+          ]
+        },
+        "value": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/scalar"
+        },
+        "basis": {
+          "const": "explicit_user_statement"
+        },
+        "statement_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/evidence_ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "key",
+        "value",
+        "basis",
+        "statement_refs"
+      ],
+      "additionalProperties": false
+    },
+    "note": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40000
+        },
+        "artifact_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/source_ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "title",
+        "body",
+        "artifact_refs"
+      ],
+      "additionalProperties": false
+    },
+    "goal": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "active",
+            "paused",
+            "completed",
+            "cancelled"
+          ]
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "milestone_id": {
+                "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "status": {
+                "enum": [
+                  "proposed",
+                  "active",
+                  "completed"
+                ]
+              }
+            },
+            "required": [
+              "milestone_id",
+              "title",
+              "status"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "resource_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/source_ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "status",
+        "milestones",
+        "resource_refs"
+      ],
+      "additionalProperties": false
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "goal_ref": {
+          "anyOf": [
+            {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "accepted",
+            "completed",
+            "cancelled"
+          ]
+        },
+        "due_at": {
+          "anyOf": [
+            {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "time_zone": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "estimated_minutes": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "resource_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/source_ref"
+          },
+          "minItems": 0
+        },
+        "depends_on_task_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "title",
+        "goal_ref",
+        "status",
+        "due_at",
+        "time_zone",
+        "estimated_minutes",
+        "resource_refs",
+        "depends_on_task_ids"
+      ],
+      "additionalProperties": false
+    },
+    "session_summary": {
+      "type": "object",
+      "properties": {
+        "goal_ref": {
+          "anyOf": [
+            {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000
+        },
+        "open_steps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "minItems": 0
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/evidence_ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "goal_ref",
+        "summary",
+        "open_steps",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "permission": {
+      "type": "object",
+      "properties": {
+        "grant_id": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+        },
+        "principal_id": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "read",
+              "write_note",
+              "write_plan",
+              "correct",
+              "delete",
+              "export",
+              "infer_workstation",
+              "infer_cloud",
+              "backup",
+              "restore"
+            ]
+          },
+          "minItems": 1
+        },
+        "record_classes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "artifact",
+              "learning_event",
+              "learning_state",
+              "fact",
+              "preference",
+              "note",
+              "goal",
+              "task",
+              "session_summary",
+              "permission",
+              "receipt",
+              "correction",
+              "deletion"
+            ]
+          },
+          "minItems": 1
+        },
+        "destinations": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+          },
+          "minItems": 0
+        },
+        "valid_from": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+        },
+        "expires_at": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+        },
+        "revoked_at": {
+          "anyOf": [
+            {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "granted_by": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+        }
+      },
+      "required": [
+        "grant_id",
+        "principal_id",
+        "actions",
+        "record_classes",
+        "destinations",
+        "valid_from",
+        "expires_at",
+        "revoked_at",
+        "granted_by"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "actions": {
+                "contains": {
+                  "enum": [
+                    "infer_workstation",
+                    "infer_cloud"
+                  ]
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "destinations": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "receipt": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "actor_id": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+        },
+        "scope_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/evidence_ref"
+          },
+          "minItems": 0
+        },
+        "policy_sha256": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/sha256"
+        },
+        "provider_id": {
+          "anyOf": [
+            {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "outcome": {
+          "enum": [
+            "accepted",
+            "rejected",
+            "completed",
+            "failed",
+            "cancelled"
+          ]
+        },
+        "raw_payload_logged": {
+          "const": false
+        }
+      },
+      "required": [
+        "operation",
+        "actor_id",
+        "scope_refs",
+        "policy_sha256",
+        "provider_id",
+        "outcome",
+        "raw_payload_logged"
+      ],
+      "additionalProperties": false
+    },
+    "correction": {
+      "type": "object",
+      "properties": {
+        "target_id": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+        },
+        "expected_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "replacement_id": {
+          "anyOf": [
+            {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "invalidated_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/evidence_ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "target_id",
+        "expected_revision",
+        "replacement_id",
+        "reason",
+        "invalidated_refs"
+      ],
+      "additionalProperties": false
+    },
+    "deletion": {
+      "type": "object",
+      "properties": {
+        "target_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+          },
+          "minItems": 1
+        },
+        "requested_by": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+        },
+        "requested_at": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+        },
+        "scope": {
+          "enum": [
+            "active_state",
+            "all_permitted_copies"
+          ]
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "applied",
+            "retained_exception",
+            "verified_backup_purge"
+          ]
+        },
+        "exception": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "backup_state": {
+          "enum": [
+            "pending",
+            "retained_until_policy_expiry",
+            "pruned",
+            "not_configured",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "target_ids",
+        "requested_by",
+        "requested_at",
+        "scope",
+        "status",
+        "exception",
+        "backup_state"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "artifact"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/artifact"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "learning_event"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/learning_event"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "learning_state"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/learning_state"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "fact"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/fact"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "preference"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/preference"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "note"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/note"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "goal"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/goal"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "task"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/task"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "session_summary"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/session_summary"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "permission"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/permission"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "receipt"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/receipt"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "correction"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/correction"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "deletion"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "$ref": "#/$defs/deletion"
+          }
+        }
+      }
+    }
+  ]
+}

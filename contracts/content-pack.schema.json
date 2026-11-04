@@ -1,0 +1,683 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:commonstar:schema:content-pack:1",
+  "title": "Commonstar portable content pack manifest",
+  "description": "Cryptographic signature and hash verification belong to the importer. These tests only validate structure and stated cross-references.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "pack_id": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+    },
+    "version": {
+      "$ref": "urn:commonstar:schema:common:1#/$defs/semver"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+      },
+      "minItems": 1
+    },
+    "audiences": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "adult",
+          "13_plus",
+          "under13"
+        ]
+      },
+      "minItems": 1
+    },
+    "rights": {
+      "type": "object",
+      "properties": {
+        "license_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "license_text_path": {
+          "$ref": "urn:commonstar:schema:common:1#/$defs/safe_relative_path"
+        },
+        "attribution": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "source_uri": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "license_id",
+        "license_text_path",
+        "attribution",
+        "source_uri"
+      ],
+      "additionalProperties": false
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+          },
+          "path": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/safe_relative_path"
+          },
+          "media_type": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "sha256": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/sha256"
+          },
+          "byte_length": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "rights_ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "asset_id",
+          "path",
+          "media_type",
+          "sha256",
+          "byte_length",
+          "rights_ref"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "standards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "framework": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "edition": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "code": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "source_uri": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "framework",
+          "edition",
+          "code",
+          "source_uri"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "objective_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "prerequisite_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "objective_id",
+          "label",
+          "prerequisite_ids"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "lessons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lesson_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          },
+          "objective_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+            },
+            "minItems": 1
+          },
+          "asset_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+            },
+            "minItems": 1
+          },
+          "exercise_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+            },
+            "minItems": 0
+          },
+          "accessibility_refs": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "lesson_id",
+          "title",
+          "objective_ids",
+          "asset_ids",
+          "exercise_ids",
+          "accessibility_refs"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "draft",
+            "educator_reviewed"
+          ]
+        },
+        "reviewer_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+          },
+          "minItems": 0
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "reviewer_ids",
+        "reviewed_at"
+      ],
+      "additionalProperties": false
+    },
+    "signature": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "algorithm": {
+              "const": "ed25519"
+            },
+            "key_id": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+            },
+            "manifest_sha256": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/sha256"
+            },
+            "signature_base64": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9+/]{86}==$"
+            }
+          },
+          "required": [
+            "algorithm",
+            "key_id",
+            "manifest_sha256",
+            "signature_base64"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "author_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+          },
+          "display_name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "role": {
+            "enum": [
+              "author",
+              "editor",
+              "translator",
+              "reviewer"
+            ]
+          }
+        },
+        "required": [
+          "author_id",
+          "display_name",
+          "role"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "checkers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "checker_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+          },
+          "kind": {
+            "enum": [
+              "numeric",
+              "choice",
+              "expression",
+              "educator_rubric"
+            ]
+          },
+          "version": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/semver"
+          },
+          "implementation_ref": {
+            "anyOf": [
+              {
+                "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "authority": {
+            "enum": [
+              "deterministic",
+              "educator_review_required"
+            ]
+          }
+        },
+        "required": [
+          "checker_id",
+          "kind",
+          "version",
+          "implementation_ref",
+          "authority"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "exercise_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          },
+          "prompt_asset_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+          },
+          "prompt_locator": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "objective_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+            },
+            "minItems": 1
+          },
+          "response_type": {
+            "enum": [
+              "number",
+              "choice",
+              "expression",
+              "short_text"
+            ]
+          },
+          "choices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "option_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40
+                },
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                }
+              },
+              "required": [
+                "option_id",
+                "label"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "checker_ref": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+          },
+          "answer_spec": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "const": "numeric"
+                  },
+                  "expected_value": {
+                    "type": "number"
+                  },
+                  "absolute_tolerance": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "type",
+                  "expected_value",
+                  "absolute_tolerance"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "const": "choice"
+                  },
+                  "correct_option_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 40
+                    },
+                    "minItems": 1
+                  }
+                },
+                "required": [
+                  "type",
+                  "correct_option_ids"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "const": "expression"
+                  },
+                  "expected_expression": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 4000
+                  },
+                  "variables": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "type",
+                  "expected_expression",
+                  "variables"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "const": "rubric"
+                  },
+                  "criteria": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "criterion_id": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 80
+                        },
+                        "description": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 2000
+                        },
+                        "maximum_points": {
+                          "type": "number",
+                          "exclusiveMinimum": 0
+                        }
+                      },
+                      "required": [
+                        "criterion_id",
+                        "description",
+                        "maximum_points"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 1
+                  }
+                },
+                "required": [
+                  "type",
+                  "criteria"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "feedback_asset_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+            },
+            "minItems": 0
+          },
+          "accessibility_refs": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "exercise_id",
+          "title",
+          "prompt_asset_id",
+          "prompt_locator",
+          "objective_ids",
+          "response_type",
+          "choices",
+          "checker_ref",
+          "answer_spec",
+          "feedback_asset_ids",
+          "accessibility_refs"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "accessibility_assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "accessibility_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/named_id"
+          },
+          "asset_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+          },
+          "for_asset_id": {
+            "$ref": "urn:commonstar:schema:common:1#/$defs/id"
+          },
+          "role": {
+            "enum": [
+              "plain_text",
+              "alt_text",
+              "transcript",
+              "captions",
+              "audio_description",
+              "math_semantics",
+              "sign_language"
+            ]
+          },
+          "language": {
+            "type": "string",
+            "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+          }
+        },
+        "required": [
+          "accessibility_id",
+          "asset_id",
+          "for_asset_id",
+          "role",
+          "language"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "pack_id",
+    "version",
+    "title",
+    "languages",
+    "audiences",
+    "rights",
+    "assets",
+    "standards",
+    "objectives",
+    "lessons",
+    "review",
+    "signature",
+    "authors",
+    "checkers",
+    "exercises",
+    "accessibility_assets"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "review": {
+            "properties": {
+              "status": {
+                "const": "educator_reviewed"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "review": {
+            "properties": {
+              "reviewer_ids": {
+                "minItems": 1
+              },
+              "reviewed_at": {
+                "$ref": "urn:commonstar:schema:common:1#/$defs/timestamp"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

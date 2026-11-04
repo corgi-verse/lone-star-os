@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "provider_id": "urn:commonstar:provider:local-authenticated-http",
+  "kind": "local",
+  "display_name": "Synthetic local configuration",
+  "enabled": true,
+  "preferred": true,
+  "endpoint": {
+    "transport": "http-loopback",
+    "address": "http://127.0.0.1:17832",
+    "server_identity": null,
+    "authentication": {
+      "method": "api_key",
+      "credential_ref": "urn:commonstar:credential:local-inference-key",
+      "application_credential_ref": null
+    }
+  },
+  "model": {
+    "upstream_id": "google/gemma-4-E4B-it",
+    "revision": "SYNTHETIC-UNVERIFIED-REVISION",
+    "format": "gguf",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "license_id": "Apache-2.0",
+    "context_limit": 8192
+  },
+  "capabilities": {
+    "text": true,
+    "streaming": true,
+    "json_schema": true,
+    "tools": false,
+    "embeddings": false
+  },
+  "data_policy": {
+    "custody": "on_device",
+    "payload_logging": "disabled",
+    "training_use": "disabled",
+    "personal_payload_persistence": "disabled",
+    "retention_control": "local_only",
+    "policy_uri": "urn:commonstar:policy:synthetic-local",
+    "policy_checked_at": "2026-11-04T01:30:00-06:00",
+    "policy_valid_until": "2027-01-01T00:00:00Z",
+    "approval_status": "approved",
+    "age_policy": "adult_only",
+    "evidence_ref": "urn:commonstar:evidence:synthetic-contract-fixture"
+  },
+  "budget": {
+    "currency": "USD",
+    "maximum_cost_per_day": 0
+  },
+  "timeouts": {
+    "connect_seconds": 10,
+    "request_seconds": 180
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "provider_id": "urn:commonstar:provider:paired-workstation",
+  "kind": "workstation",
+  "display_name": "Synthetic paired workstation",
+  "enabled": true,
+  "preferred": true,
+  "endpoint": {
+    "transport": "ssh-forward",
+    "address": "http://127.0.0.1:18082",
+    "server_identity": {
+      "algorithm": "ssh-ed25519",
+      "fingerprint": "SHA256:SYNTHETIC_NOT_A_REAL_HOST_KEY"
+    },
+    "authentication": {
+      "method": "ssh_key",
+      "credential_ref": "urn:commonstar:credential:workstation-key",
+      "application_credential_ref": "urn:commonstar:credential:workstation-key"
+    }
+  },
+  "model": {
+    "upstream_id": "google/gemma-4-31B-it",
+    "revision": "SYNTHETIC-UNVERIFIED-REVISION",
+    "format": "gguf",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "license_id": "Apache-2.0",
+    "context_limit": 16384
+  },
+  "capabilities": {
+    "text": true,
+    "streaming": true,
+    "json_schema": true,
+    "tools": false,
+    "embeddings": false
+  },
+  "data_policy": {
+    "custody": "self_hosted",
+    "payload_logging": "disabled",
+    "training_use": "disabled",
+    "personal_payload_persistence": "disabled",
+    "retention_control": "configured_ephemeral",
+    "policy_uri": "urn:commonstar:policy:synthetic-workstation",
+    "policy_checked_at": "2026-11-04T01:30:00-06:00",
+    "policy_valid_until": "2027-01-01T00:00:00Z",
+    "approval_status": "approved",
+    "age_policy": "adult_only",
+    "evidence_ref": "urn:commonstar:evidence:synthetic-contract-fixture"
+  },
+  "budget": {
+    "currency": "USD",
+    "maximum_cost_per_day": 0
+  },
+  "timeouts": {
+    "connect_seconds": 10,
+    "request_seconds": 180
+  }
+}
