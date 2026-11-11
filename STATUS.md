@@ -2,6 +2,12 @@
 
 Date: 4 November 2026 (America/Chicago). Release: **Specification v1.0**.
 
+## 10 November 2026 — OS-first implementation planning addendum
+
+Current verified GitHub path: [corgi-verse/lone-star-os](https://github.com/corgi-verse/lone-star-os); the historical `corgi-verse/commonstar-learning-os` link redirects to this repository. The current `main` remains a **specification and validation package**, not a runnable app or bootable ISO. No OS implementation, VM boot, package build, model inference, or hardware verification is claimed by this addendum.
+
+Added [the parallel OS/curriculum build brief](docs/BUILD_WHILE_CURRICULUM_GROWS.md). The user reports Codex Astra curriculum progress through Grade 4, but that work is not visible on this repository's `main`; the OS importer must locate its authoritative source before integration, without regenerating it. **Next runnable gate:** launch a real Linux learner app with actual or clearly labeled synthetic lesson input and persisted progress; then boot that same app inside a disposable Debian live VM. No local command, tests or runtime verification were performed for this documentation-only update.
+
 ## Delivered scope
 
 The complete distro specification and repository package are prepared. They define the installable Linux product, mandatory local intelligence, private learning memory, Ubuntu workstation bridge, optional cloud adapter, recovery, accessible learning experience, school deployment requirements, licensing and acceptance evidence.
