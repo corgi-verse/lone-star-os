@@ -2,6 +2,14 @@
 
 Date: 4 November 2026 (America/Chicago). Release: **Specification v1.0**.
 
+## 12 November 2026: agent-neutral ISO build assignment
+
+**Current corpus completeness is unknown pending the user's planned Ubuntu/Dots audit.** The latest user report supersedes earlier claims of completed K-12 generation; do not infer completion from the older K-4 checkpoint either. The actual Ubuntu worktree and corpus were not inspected in this documentation turn.
+
+Added [the agent starting assignment](docs/ISO_AGENT_START.md) and [the complete ISO implementation specification](docs/ISO_AGENT_BUILD_SPEC.md). The target is a real, installed, offline engineering alpha with local inference, available-corpus import, private persistent state, reboot and recovery evidence. An early boot preview is required but is not the completion endpoint. The specification preserves the existing content-pack v1 contract, adapts the actual corpus read-only, supports partial coverage and later pack installation, and leaves deep educational review to the later audit/review workstream.
+
+This update changes documentation only. Handoff checks verified 30 unique acceptance IDs, matching unexecuted checklist requirements in the downloadable packet, JSON parsing, local document links, and unchanged reference-board hashes. No application build, ISO build, VM boot, model inference, corpus audit, hardware or participant test was performed. Existing schemas, implementation files and historical evidence remain unchanged. The next builder must inspect the local checkout and resume existing work rather than assuming the GitHub specification baseline is the whole project.
+
 ## 10 November 2026 — OS-first implementation planning addendum
 
 Current verified GitHub path: [corgi-verse/lone-star-os](https://github.com/corgi-verse/lone-star-os); the historical `corgi-verse/commonstar-learning-os` link redirects to this repository. The current `main` remains a **specification and validation package**, not a runnable app or bootable ISO. No OS implementation, VM boot, package build, model inference, or hardware verification is claimed by this addendum.
